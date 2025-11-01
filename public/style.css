@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+
+body {
+  font-family: 'Vazirmatn', sans-serif;
+  direction: rtl;
+  text-align: center;
+  background-color: #fff7e6; /* کرمی ملایم */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: #f5e8d0; /* کرمی روشن */
+  padding: 30px 25px;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+h1 {
+  color: #6b3e26; /* قهوه‌ای ملایم */
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.add-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.add-form input {
+  flex: 1;
+  padding: 12px 15px;
+  border-radius: 20px;
+  border: 1px solid #d1bfa0;
+  font-size: 16px;
+  outline: none;
+  background-color: #fff2e0;
+}
+
+.add-form button {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  border-radius: 50%; /* دایره‌ای */
+  border: none;
+  background-color: #f0932b; /* نارنجی ملایم هالووینی */
+  color: #fff;
+  cursor: pointer;
+  font-size: 24px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.add-form button:hover {
+  background-color: #e58e26;
+  transform: scale(1.1);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffe9c8; /* کرمی روشن */
+  margin: 10px 0;
+  padding: 12px 15px;
+  border-radius: 15px;
+  transition: background 0.3s ease;
+}
+
+li:hover {
+  background: #f6d9a3; /* کمی تیره‌تر برای جلوه Hover */
+}
+
+li.done span {
+  text-decoration: line-through;
+  color: #a67c52; /* قهوه‌ای کم‌رنگ */
+}
+
+.inline-form {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 2px;
+}
+
+.inline-form button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #6b3e26;
+  transition: color 0.2s ease;
+}
+
+.inline-form button:hover {
+  color: #f0932b; /* نارنجی ملایم */
+}
+
+.inline-form input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #d1bfa0;
+  width: 90px;
+  font-size: 14px;
+}
+
+span {
+  flex: 1;
+  text-align: right;
+  padding: 0 10px;
+  cursor: pointer;
+  color: #6b3e26;
+}

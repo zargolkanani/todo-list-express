@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<title>مدیریت کارهای روزانه</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>✔️ لیست کارهای من</h1>
+<p id="shamsi-date" style="color:#6b3e26; font-weight:500; margin-bottom:15px;"></p>
+
+
+    <form action="/add" method="POST" class="add-form">
+      <input name="task" placeholder="یک کار جدید بنویس..." required>
+      <button type="submit">➕</button>
+    </form>
+
+    <ul>
+      <% tasks.forEach((t, index) => { %>
+      <li class="<%= t.done ? 'done' : '' %>">
+        <form action="/toggle/<%= index %>" method="POST" class="inline-form">
+          <button>✔</button>
+        </form>
+
+        <span><%= t.text %></span>
+
+        <form action="/edit/<%= index %>" method="POST" class="inline-form">
+          <input name="newText" placeholder="ویرایش" required>
+          <button>✏️</button>
+        </form>
+
+        <form action="/delete/<%= index %>" method="POST" class="inline-form">
+          <button>❌</button>
+        </form>
+      </li>
+      <% }) %>
+    </ul>
+  </div>
+
+<script src="/script.js"></script>
+</body>
+</html>
